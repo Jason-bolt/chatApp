@@ -13,9 +13,10 @@
 
     <section class="">
         <div class="container">
-            <div class="row mt-4 shadow">
-                <!-- user info -->
+            <div class="row mt-4 shadow" style="height: 90vh;">
+                <!-- Leftside -->
                 <div class="col-4" style="background-color: #eee;">
+                    <!-- user info -->
                     <div class="text-center pt-4">
                         <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="120px">
                         <p class="lead">Jason Appiatu</p>
@@ -170,16 +171,28 @@
                     </div>
                 </div>
     
-                <!-- Messages -->
-                <div class="col p-0" style="overflow: scroll; height: 90vh; background-color: #dddddd;">
+                <!-- Right side -->
+                <div class="col p-0 position-relative" style="background-color: #dddddd;">
                     <!-- Top -->
-                    <div class="bg-white" style="height: 60px;">
-                        
+                    <div class="position-absolute top-0 bg-white text-end" style="height: 60px; width: 100%;">
+
+                        <p class="">Jason Appiatu
+                            <img src="me.jpg" alt="Image" class="img-fluid rounded-circle m-2" width="45px">
+                        </p>
                     </div>
+                    
+
+                    <!-- Messages -->
+                    <div></div>
+
+                    <!-- Form -->
+                    <div class="position-absolute bottom-0 bg-white" style="height: 200px; "></div>
                 </div>
             </div>
         </div>
     </section>
+
+    
 
 </body>
 </html>
