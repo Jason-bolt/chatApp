@@ -9,6 +9,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+    <style>
+        .contents-items{
+        position: fixed;
+        width: 174px;
+        height: 156px;
+        padding-top: 7px;
+        background-color: black;
+        bottom: 99px;
+        right: 90px;
+        opacity: 0;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.5s;
+}
+
+
+
+.content-button{
+    /* position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 45px;
+    border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: red;
+    font-size: 17px;
+    color: #fff;
+
+}
+
+.content-button:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.show-button{
+  opacity: 1;
+}
+
+.items-list{
+      list-style: none;
+      padding-left: 9px;
+}
+
+.items-list li{
+      padding: 6px;
+      padding-left: 15px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+
+}
+
+.items-list li:hover{
+      
+     color:red;
+}
+
+.items-list li i{
+      width: 19px;
+}
+    </style>
 </head>
 <!-- <body style="background-color: #ebebeb; "> -->
 <body style="background-image: radial-gradient(rgb(12, 0, 116), rgb(45, 0, 56)); background-repeat: no-repeat; height: 100vh;">
@@ -203,7 +271,7 @@
                         <form action="" class="pt-1">
                             <div class="d-flex flex-row justify-content-around">
                                 <!-- Attachment button -->
-                                <button class="btn btn-secondary rounded-circle">
+                                <button class="btn btn-secondary rounded-circle content-button" onclick="viewbutton();">
                                     <i class="bi bi-paperclip"></i>
                                 </button>
 
@@ -216,8 +284,8 @@
                                     </ul>
                                 </div>
 
-                                <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none;" placeholder="Type your message here..."></textarea>
-                                <button class="btn btn-primary rounded-pill px-5">Send <i class="bi bi-send"></i></button>
+                                <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none; height: fit-content;" placeholder="Type your message here..."></textarea>
+                                <button class="btn btn-primary rounded-pill px-5" style="height: fit-content;">Send <i class="bi bi-send"></i></button>
                             </div>
                         </form>
                             
@@ -228,6 +296,22 @@
         </div>
     </section>
 
+    
+    <script>
+        function viewbutton(){
+
+            var testElement = document.getElementById('file-div');
+
+            var button_div = testElement.classList.contains('show-button');
+
+            if (button_div) {
+                testElement.classList.remove("show-button");
+            }else{
+                testElement.classList.add("show-button");
+            }
+
+        }
+    </script>
     
 
 </body>
