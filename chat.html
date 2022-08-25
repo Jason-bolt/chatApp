@@ -202,8 +202,21 @@
                     <div class="position-absolute bottom-0 bg-white px-2" style="height: 45px; width: 100%;">
                         <form action="" class="pt-1">
                             <div class="d-flex flex-row justify-content-around">
-                                <!-- <input type="text" name="message" id="message" class="form-control rounded-pill me-2" style="width: 80%; overflow-y: scroll;"> -->
-                                <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 75%; resize: none;" placeholder="Type your message here..."></textarea>
+                                <!-- Attachment button -->
+                                <button class="btn btn-secondary rounded-circle">
+                                    <i class="bi bi-paperclip"></i>
+                                </button>
+
+                                <div id="file-div" class="contents-items">
+                                    <ul class="items-list">
+                                        <li><i class="bi bi-image me-2"></i>Photo</li>
+                                        <li><i class="bi bi-file me-2"></i>File</li>
+                                        <li><i class="bi bi-mic mr-2"></i>Record</li>
+                                        <li><i class="bi bi-folder2-open mr-2"></i>File</li>
+                                    </ul>
+                                </div>
+
+                                <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none;" placeholder="Type your message here..."></textarea>
                                 <button class="btn btn-primary rounded-pill px-5">Send <i class="bi bi-send"></i></button>
                             </div>
                         </form>
