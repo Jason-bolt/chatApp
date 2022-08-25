@@ -76,6 +76,12 @@
 .items-list li i{
       width: 19px;
 }
+
+@media only screen and (max-width: 1184px) {
+    #send-button{
+        display: none;
+    }
+}
     </style>
 </head>
 <!-- <body style="background-color: #ebebeb; "> -->
@@ -285,7 +291,7 @@
                                 </div>
 
                                 <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none; height: fit-content;" placeholder="Type your message here..."></textarea>
-                                <button class="btn btn-primary rounded-pill px-5" style="height: fit-content;">Send <i class="bi bi-send"></i></button>
+                                <button class="btn btn-primary rounded-pill px-2 px-sm-3 px-md-5"><span id="send-button">Send</span> <i class="bi bi-send"></i></button>
                             </div>
                         </form>
                             
